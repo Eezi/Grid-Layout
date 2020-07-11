@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.5fr;
+    grid-template-rows: 1fr 4fr 3fr 2fr;
+    grid-template-areas: 
+      "main      main     header"
+      "main      main     candy"
+      "nom       yum      candy"
+      "footer    footer   candy";
+    height: 100vh;
+    margin: 2rem;
+}
+
+main {
+    grid-area: main;
+    background: rgb(139, 238, 213);
+}
+
+section.nom{
+    grid-area: nom;
+    background-color: rgb(0, 68, 255);
+}
+
+section.yum{
+    grid-area: yum;
+    background-color: rgb(255, 0, 212);
+}
+
+section.diabeetus{
+    grid-area: footer;
+    background-color: rgb(251, 255, 0);
+}
+
+header {
+    grid-area: header;
+}
+
+.candy {
+    grid-area: candy;
+    background: url('vuori.jpg') no-repeat;
+    background-size: cover;
+}
